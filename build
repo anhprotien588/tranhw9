@@ -1,0 +1,9 @@
+#This file is a Bash build file for control_GPIO application
+#Include the configuration for p9.12 and p8.16
+
+#!/bin/bash
+echo "Starting to build control_GPIO application" 
+config-pin p9.12 gpio
+config-pin p8.16 gpio_pu
+g++ control_GPIO.cpp -o control_GPIO 
+echo "Finished"
